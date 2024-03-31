@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<body>
+    
+    <div style="text-align: center;">
+    <div>
+        <h2>Key publications</h2>
+        {% for article in articles %}
+        <ul style="padding-left: 100px; padding-right: 100px;">
+            <div style="text-align: justified;">
+                <li>{{ article.authors }}. 
+                ({{ article.year }}). 
+                <i>{{ article.title }}</i></li>
+
+            </div>
+        </ul>
+        {% endfor %}
+    </div>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load static %}
+<!-- Inside your base HTML template (e.g., base.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/Tabs.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/GridIllus.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="nav-links">
+        <a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+        <a href="{% url 'publications' %}" class="{% if request.path == '/publications/' %}active{% endif %}">Research</a>
+        <a href="{% url 'prints' %}" class="{% if request.path == '/prints/' %}active{% endif %}">Illustrations</a>
+        <a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact Me</a>
+        <!-- Add tabs for other pages as needed -->
+    </div>
+    <div class="name">Tristan J Canterbury, PhD student</div>
+</div>
+
+<div class="content">
+    {% block content %}
+    <!-- Page-specific content goes here -->
+    {% endblock %}
+</div>
+
+</body>
+</html>
