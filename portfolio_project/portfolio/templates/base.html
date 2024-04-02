@@ -8,9 +8,10 @@
     <title>{% block title %}My Portfolio{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/Tabs.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/GridIllus.css' %}">
+    <link rel="icon" href="{% static 'Images/XathaLit2bit.ico' %}">
+
 </head>
 <body>
-
 <div class="navbar">
     <div class="nav-links">
         <a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
@@ -19,7 +20,13 @@
         <a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact Me</a>
         <!-- Add tabs for other pages as needed -->
     </div>
-    <div class="name">Tristan J Canterbury, PhD student</div>
+
+    <div class="icon">
+        <img src="{% static 'Images/XathaLit2bit.ico' %}" alt="Icon">
+    </div>
+    <div class="name">
+        Tristan J Canterbury
+    </div>
 </div>
 
 <div class="content">

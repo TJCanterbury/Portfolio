@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-tp9&o0g)qx=p28%h1m8)*8me!y4+27i!)_c+b2facx(syut7+$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['tc661.pythonanywhere.com']
 
 # Application definition
 
@@ -55,7 +54,7 @@ ROOT_URLCONF = 'portfolio_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'templates'], 
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,13 +115,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'productionfiles'
+STATIC_ROOT = '/home/tc661/Portfolio/portfolio_project/'
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 #Add this in your settings.py file:
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'static',
 ]
 
 # Default primary key field type
