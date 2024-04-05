@@ -15,9 +15,30 @@
 <div class="navbar">
     <div class="nav-links">
         <a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
-        <a href="{% url 'publications' %}" class="{% if request.path == '/publications/' %}active{% endif %}">Research</a>
-        <a href="{% url 'prints' %}" class="{% if request.path == '/prints/' %}active{% endif %}">Illustrations</a>
-        <a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact Me</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Art
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" style="overflow:visible">
+          <a href="{% url 'prints' %}" class="{% if request.path == '/prints/' %}active{% endif %}">Illustrations</a>
+          <a href="{% url 'prints' %}" class="{% if request.path == '/prints/' %}active{% endif %}">Prints</a>
+          <a href="#">Heretics of Xathia</a>
+          <a href="#">Sketches</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Research
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" style="overflow:visible">
+          <a href="{% url 'publications' %}" class="{% if request.path == '/publications/' %}active{% endif %}">Publications</a>
+          <a href="#">Projects</a>
+          <a href="#">Opinions</a>
+        </div>
+      </div>
+
+        <!--<a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a>-->
         <!-- Add tabs for other pages as needed -->
     </div>
 
@@ -35,5 +56,3 @@
     {% endblock %}
 </div>
 
-</body>
-</html>
