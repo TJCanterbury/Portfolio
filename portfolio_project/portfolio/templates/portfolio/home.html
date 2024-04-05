@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Home - My Portfolio{% endblock %}
+{% block title %}Home - About Me{% endblock %}
 
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/Profile.css' %}">
@@ -11,16 +11,4 @@
     </div>
 </div>
 
-<div style="text-align: center;" class="container">
-    <h1 flex = "1" text-align= "justify" font-size= "18px" padding-right = "20px" font-family ="Courier New"> Send me an Email! </h1>
-
-    <p flex: 1;
-    text-align: justify;
-    font-size: 18px;
-    padding-right: 20px;>TC661@exeter.ac.uk
-    TJC19@protonmail.com</p>
-
-
-    <img src="{% static 'Images/Centipede.jpeg' %}"  alt="Tristan's old friend" style="max-width: 100%;">
-</div>
 {% endblock %}

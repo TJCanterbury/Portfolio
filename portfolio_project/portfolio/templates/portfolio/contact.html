@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Home - My Portfolio{% endblock %}
+{% block title %}Contact{% endblock %}
 
 {% block content %}
 <div style="text-align: center;" class="container">
-    <p> Send me an Email! Always looking for an excuse to discuss ideas with people and collaborate </p>
-    
-    <p>Primary Email: TC661@exeter.ac.uk</p>
-    <p>Secondary Email: TJC19@protonmail.com</p>
+    <h1 flex = "1" text-align= "justify" font-size= "18px" padding-right = "20px" font-family ="Courier New"> Send me an Email! </h1>
+    <p> Always looking for an excuse to discuss ideas with people and collaborate </p>
 
-    
+    <p flex: 1;
+    text-align: justify;
+    font-size: 18px;
+    padding-right: 20px;>TC661@exeter.ac.uk
+    TJC19@protonmail.com</p>
+
+
     <img src="{% static 'Images/Centipede.jpeg' %}"  alt="Tristan's old friend" style="max-width: 100%;">
 </div>
 {% endblock %}

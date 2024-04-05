@@ -17,28 +17,31 @@
         <a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
 
       <div class="dropdown">
-        <button class="dropbtn">Art
+        <button class="dropbtn">Science
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" style="overflow:visible">
+          <a href="{% url 'projects' %}" class="{% if request.path == '/projects/' %}active{% endif %}">Projects</a>
+          <a href="{% url 'publications' %}" class="{% if request.path == '/publications/' %}active{% endif %}">Publications</a>
+          <a href="{% url 'opinions' %}" class="{% if request.path == '/opinions/' %}active{% endif %}">Blog</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Fiction
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" style="overflow:visible">
           <a href="{% url 'prints' %}" class="{% if request.path == '/prints/' %}active{% endif %}">Illustrations</a>
-          <a href="{% url 'prints' %}" class="{% if request.path == '/prints/' %}active{% endif %}">Prints</a>
-          <a href="#">Heretics of Xathia</a>
-          <a href="#">Sketches</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Research
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" style="overflow:visible">
-          <a href="{% url 'publications' %}" class="{% if request.path == '/publications/' %}active{% endif %}">Publications</a>
-          <a href="#">Projects</a>
-          <a href="#">Opinions</a>
+          <a href="{% url 'heretics' %}" class="{% if request.path == '/heretics/' %}active{% endif %}">Story: Heretics of Xathia</a>
+          <a href="{% url 'sketches' %}" class="{% if request.path == '/sketches/' %}active{% endif %}">Sketches </a>
         </div>
       </div>
 
-        <!--<a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a>-->
+      <div class="dropdown">
+        <a href="{% url 'contact' %}" class="dropbtn">Contact</a>
+      </div>
+
         <!-- Add tabs for other pages as needed -->
     </div>
 
