@@ -1,24 +1,30 @@
 
 .profile {
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 20px;
 }
 
-.profile img {
+.profile_image img {
+    order: 1;
     width: auto;
     height: 350px;
     margin-right: 20px;
-    
     padding: 20px; /* Top, right, bottom, left */
     /* Add more padding to the left side */
 }
 
 .profile-info {
     /* Ensure the text is positioned to the right */
-    flex: 1;
+    order: 2;
     /* Adjust text alignment */
     text-align: justify;
     font-size: 18px;
-    padding-right: 20px;
 }
+
+@media (max-width: 800px) {
+    .profile {
+      flex-direction: column;
+    }
+  }

@@ -14,8 +14,10 @@
 <body>
 <div class="navbar">
     <div class="nav-links">
-        <a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
 
+      <div class="dropdown">
+        <a href="{% url 'home' %}" class="dropbtn">Home</a>
+      </div>
       <div class="dropdown">
         <button class="dropbtn">Science
           <i class="fa fa-caret-down"></i>
@@ -33,7 +35,7 @@
         </button>
         <div class="dropdown-content" style="overflow:visible">
           <a href="{% url 'prints' %}" class="{% if request.path == '/prints/' %}active{% endif %}">Illustrations</a>
-          <a href="{% url 'heretics' %}" class="{% if request.path == '/heretics/' %}active{% endif %}">Story: Heretics of Xathia</a>
+          <a href="{% url 'heretics' %}" class="{% if request.path == '/heretics/' %}active{% endif %}">Heretics of Xathia</a>
           <a href="{% url 'sketches' %}" class="{% if request.path == '/sketches/' %}active{% endif %}">Sketches </a>
         </div>
       </div>

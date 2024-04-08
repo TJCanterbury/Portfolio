@@ -5,7 +5,9 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/Profile.css' %}">
 <div class="profile">
-    <img src="{% static 'Images/Marshes.jpg' %}"  alt="Tristan's Profile Photo" style="width: auto; max-height: 400px; margin-right: 20px;">
+    <div class="profile_image">
+    <img src="{% static 'Images/ProfileNevis.jpg' %}"  alt="Tristan's Profile Photo" style="width: auto; max-height: 400px; margin-right: 20px;">
+    </div>
     <div class="profile-info" style="white-space: pre-line;">
         <p>{{ profile.description }}</p>
     </div>
