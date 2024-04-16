@@ -3,8 +3,28 @@
 {% block title %}Fiction - Sketches{% endblock %}
 
 {% block content %}
-<body>
-    
+<script>
+    function openFullScreen(imageUrl) {
+        // Create a new full screen window
+        var fullScreenWindow = window.open("", "_blank", "fullscreen=yes");
 
-</body>
+        // Set the HTML content of the full screen window to display the image
+        fullScreenWindow.document.write("<img src='" + imageUrl + "' style='width: 100%; height: 100%; object-fit: contain;'>");
+
+        // Prevent the default behavior of the link
+        return false;
+    }
+</script>
+
+<div style="text-align: center;">
+    <div class="grid-container">
+        {% for sketch in sketches %}
+            <div class="grid-item">
+                <h3>{{ sketch.title }}</h3>
+                <!-- Add onclick event to open the image in full screen -->
+                <img src="{{ sketch.image.url }}" alt="{{ sketch.title }}" width="250" onclick="return openFullScreen('{{ sketch.image.url }}')" style="cursor: pointer;">
+            </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

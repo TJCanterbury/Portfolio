@@ -1,30 +1,28 @@
 
 .profile {
     display: flex;
+    margin: auto;
     flex-direction: row;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
+    justify-content: center;
 }
 
 .profile_image img {
-    order: 1;
     width: auto;
-    height: 350px;
-    margin-right: 20px;
-    padding: 20px; /* Top, right, bottom, left */
-    /* Add more padding to the left side */
+    height: 350px; /* Top, right, bottom, left */
+    justify-content: center;
 }
 
 .profile-info {
     /* Ensure the text is positioned to the right */
-    order: 2;
     /* Adjust text alignment */
     text-align: justify;
     font-size: 18px;
 }
 
-@media (max-width: 800px) {
+@media ( max-width: 800px) {
     .profile {
-      flex-direction: column;
+      flex-direction:column;
     }
   }

@@ -1,16 +1,30 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Science - Projects{% endblock %}
 
 {% block content %}
 <body>
-    <div style="text-align: center;" class="container">
-        <h1> Informational Framework of Phenotypic Plasticity </h1>
-        <p>Somethin</p>
-        <h1> Drivers of Selection for Intelligence </h1>
-        <p>Somethin</p>
-        <h1> The Adaptive Value of Information in Social Relationships </h1>
-        <p>Somethin</p>
+    <div style="text-align: center; padding: 20px;" class="container">
+        <img src="{% static 'Images/Fav_mountain.jpg' %}" style="max-width: 20%;" alt="Flowers in Chania">
+        <h1> Adaptive Radiations Across the Information Landscape </h1>
+        <p> The new synthesis; wherein we have multi-dimensional selection acting on phenotypes, products of development, and followed by genes;
+        has revolutionised how we think about the major themes of evolution biology. However, what is lost in this new synthesis is clarity as to
+        how this rather more complicated view fits into evolutionary ecology. How does the information landscape relate to adaptive radiations? Can we model phenotypic diversification using an information theoretic perspective on the socio-ecological environment? What phylogenetic information dynamic processes mediate radiations? How can we improve cladistic methods to account for the new synthesis?
+         </p>
+    </div>
+    <div style="text-align: center; padding: 20px;" class="container">
+        <img src="{% static 'Images/Intelligence.png' %}" style="max-width: 20%;" alt="Flowers in Chania">
+        <h1> The Evolution of Intelligence and Cognitive Diversity </h1>
+        <p>
+        What socio-ecological contexts select for intelligence? How do we model intelligence in evolutionary ecology? How can we account for trade-offs between intelligence and other methods of uncertainty management and belief assessment? How does intelligence differ functionally from these other methods?
+        </p>
+    </div>
+    <div style="text-align: center; padding: 20px;" class="container">
+        <img src="{% static 'Images/Diversity.png' %}" style="max-width: 100%;" alt="Flowers in Chania">
+        <h1> The Role of Cognitive Diversity in Societies </h1>
+        <p>
+        How does variation in cognitive and behavioural phenotypes influence societal structures? How do animals deal with the strategic uncertainties this diversity must generate in relationships and societies? By what evolutionary and developmental path does this variation emerge? What are the origins of cognitive diversity in human societies?
+        </p>
     </div>
 </body>
 {% endblock %}

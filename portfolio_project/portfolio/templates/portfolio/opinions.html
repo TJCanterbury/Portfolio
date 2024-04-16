@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 
 {% block title %}Science - Research Blog{% endblock %}
-
+{% load markdownify %}
 {% block content %}
 <body>
-    
+
+<div style="text-align: center;">
+        {% for entry in blog %}
+            <h3>{{ entry.title }}</h3>
+                <p>{{entry.body |markdownify}}</p>
+        {% endfor %}
+
+</div>
 
 </body>
 {% endblock %}

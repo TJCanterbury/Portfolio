@@ -4,10 +4,14 @@ from django.shortcuts import render
 from .models import Profile
 from .models import Print
 from .models import Publications
+from .models import Sketches
+from .models import Images
+from .models import Blog
+
 
 def home(request):
     profile = Profile.objects.first()  # Fetch the profile object
-    return render(request, 'portfolio/home.html', {'profile': profile}) 
+    return render(request, 'portfolio/home.html', {'profile': profile})
 
 def prints(request):
     prints = Print.objects.all()
@@ -19,16 +23,18 @@ def publications(request):
 
 def contact(request):
     profile = Profile.objects.first()  # Fetch the profile object
-    return render(request, 'portfolio/contact.html', {'profile': profile}) 
+    return render(request, 'portfolio/contact.html', {'profile': profile})
 
 def projects(request):
-    return render(request, 'portfolio/projects.html') 
+    return render(request, 'portfolio/projects.html')
 
 def opinions(request):
-    return render(request, 'portfolio/opinions.html') 
+    blog = Blog.objects.all()  # Fetch the profile object
+    return render(request, 'portfolio/opinions.html', {'blog': blog})
 
 def heretics(request):
-    return render(request, 'portfolio/heretics.html') 
+    return render(request, 'portfolio/heretics.html')
 
 def sketches(request):
-    return render(request, 'portfolio/sketches.html') 
+    sketches = Images.objects.all().filter(category="sketch")
+    return render(request, 'portfolio/sketches.html', {'sketches': sketches})
