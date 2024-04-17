@@ -13,9 +13,9 @@ def home(request):
     profile = Profile.objects.first()  # Fetch the profile object
     return render(request, 'portfolio/home.html', {'profile': profile})
 
-def prints(request):
-    prints = Print.objects.all()
-    return render(request, 'portfolio/prints.html', {'prints': prints})
+def illustrations(request):
+    illus = Images.objects.all().filter(category="illus")
+    return render(request, 'portfolio/illustrations.html', {'illus': illus})
 
 def publications(request):
     articles = Publications.objects.all()

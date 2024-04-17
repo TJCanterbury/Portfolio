@@ -28,13 +28,13 @@
           <a href="{% url 'opinions' %}" class="{% if request.path == '/opinions/' %}active{% endif %}">Blog</a>
         </div>
       </div>
-      
+
       <div class="dropdown">
         <button class="dropbtn">Fiction
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" style="overflow:visible">
-          <a href="{% url 'prints' %}" class="{% if request.path == '/prints/' %}active{% endif %}">Illustrations</a>
+          <a href="{% url 'illustrations' %}" class="{% if request.path == '/illustrations/' %}active{% endif %}">Illustrations</a>
           <a href="{% url 'heretics' %}" class="{% if request.path == '/heretics/' %}active{% endif %}">Heretics of Xathia</a>
           <a href="{% url 'sketches' %}" class="{% if request.path == '/sketches/' %}active{% endif %}">Sketches </a>
         </div>
@@ -48,7 +48,9 @@
     </div>
 
     <div class="icon">
-        <img src="{% static 'Images/XathaLit2bit.ico' %}" alt="Icon">
+        <a href="/admin/">
+            <img src="{% static 'Images/XathaLit2bit.ico' %}" alt="Icon">
+        </a>
     </div>
     <div class="name">
         Tristan J Canterbury
