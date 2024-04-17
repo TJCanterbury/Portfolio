@@ -10,7 +10,7 @@
 
 .profile_image img {
     width: auto;
-    height: 350px; /* Top, right, bottom, left */
+    height: 500px; /* Top, right, bottom, left */
     justify-content: center;
 }
 
@@ -18,7 +18,7 @@
     /* Ensure the text is positioned to the right */
     /* Adjust text alignment */
     text-align: justify;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 @media ( max-width: 800px) {

@@ -17,15 +17,12 @@
 </script>
 
 <div style="text-align: center;">
-    <div class="grid-container">
         {% for print in illus %}
-            <div class="grid-item">
-                <h3>{{ print.title }}</h3>
+                <h1 style="font-family: 'Courier New'; color: orange; text-align: center;">{{ print.title }}</h1>
                 <!-- Add onclick event to open the image in full screen -->
-                <img src="{{ print.image.url }}" alt="{{ print.title }}" width="250" onclick="return openFullScreen('{{ print.image.url }}')" style="cursor: pointer;">
-            </div>
+                <img src="{{ print.image.url }}" alt="{{ print.title }}" width="100%" onclick="return openFullScreen('{{ print.image.url }}')" style="cursor: pointer;">
+          
         {% endfor %}
-    </div>
 </div>
 
 {% endblock %}

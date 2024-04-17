@@ -7,7 +7,7 @@
 
 <div style="text-align: center;">
         {% for entry in blog %}
-            <h3>{{ entry.title }}</h3>
+            <h1  style="font-family: 'Courier New'; color: orange; text-align: center;">{{ entry.title }}</h3>
                 <p>{{entry.body |markdownify}}</p>
         {% endfor %}
 

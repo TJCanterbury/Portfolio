@@ -21,6 +21,9 @@ body {
 .content {
     padding-top: 60px; /* Add padding to the top of the content */
     /* Adjust as needed based on the height of the navbar */
+    max-width: 1500px;
+    margin: auto;
+    min-height: 100vh
 }
 
 .navbar .icon img {

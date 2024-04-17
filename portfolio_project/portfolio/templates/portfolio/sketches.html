@@ -17,14 +17,10 @@
 </script>
 
 <div style="text-align: center;">
-    <div class="grid-container">
         {% for sketch in sketches %}
-            <div class="grid-item">
-                <h3>{{ sketch.title }}</h3>
+                <h1 style="font-family: 'Courier New'; color: orange; text-align: center;">{{ sketch.title }}</h1>
                 <!-- Add onclick event to open the image in full screen -->
-                <img src="{{ sketch.image.url }}" alt="{{ sketch.title }}" width="250" onclick="return openFullScreen('{{ sketch.image.url }}')" style="cursor: pointer;">
-            </div>
+                <img src="{{ sketch.image.url }}" alt="{{ sketch.title }}" width="100%" onclick="return openFullScreen('{{ sketch.image.url }}')" style="cursor: pointer;">
         {% endfor %}
-    </div>
 </div>
 {% endblock %}

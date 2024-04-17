@@ -1,7 +1,7 @@
 {% load static %}
 <!-- Inside your base HTML template (e.g., base.html) -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +11,14 @@
     <link rel="icon" href="{% static 'Images/XathaLit2bit.ico' %}">
 
 </head>
-<body>
-<div class="navbar">
+<body style="
+  background: #7a8864;
+  background: -webkit-linear-gradient(#7a8864, #293f50);
+  background:    -moz-linear-gradient(#7a8864, #293f50);
+  background:         linear-gradient(#7a8864, #293f50);
+  height: 100%;">
+  <div class="navbar">
     <div class="nav-links">
-
       <div class="dropdown">
         <a href="{% url 'home' %}" class="dropbtn">Home</a>
       </div>
@@ -44,7 +48,7 @@
         <a href="{% url 'contact' %}" class="dropbtn">Contact</a>
       </div>
 
-        <!-- Add tabs for other pages as needed -->
+          <!-- Add tabs for other pages as needed -->
     </div>
 
     <div class="icon">
@@ -52,14 +56,16 @@
             <img src="{% static 'Images/XathaLit2bit.ico' %}" alt="Icon">
         </a>
     </div>
+
     <div class="name">
-        Tristan J Canterbury
+      Tristan J Canterbury
     </div>
-</div>
+  </div>
 
-<div class="content">
+  <div class="content" style="color:antiquewhite;
+  font-size: 20px;">
     {% block content %}
-    <!-- Page-specific content goes here -->
+      <!-- Page-specific content goes here -->
     {% endblock %}
-</div>
-
+  </div>
+</body>
