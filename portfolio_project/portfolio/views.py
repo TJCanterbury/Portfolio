@@ -7,6 +7,7 @@ from .models import Publications
 from .models import Sketches
 from .models import Images
 from .models import Blog
+from .models import HereticPage
 
 
 def home(request):
@@ -32,9 +33,15 @@ def opinions(request):
     blog = Blog.objects.all()  # Fetch the profile object
     return render(request, 'portfolio/opinions.html', {'blog': blog})
 
-def heretics(request):
-    return render(request, 'portfolio/heretics.html')
-
 def sketches(request):
     sketches = Images.objects.all().filter(category="sketch")
     return render(request, 'portfolio/sketches.html', {'sketches': sketches})
+
+def heretics(request, page="last"):
+    if page == "last":
+        page_f = HereticPage.objects.last()
+        return render(request, 'portfolio/heretics.html', {'page': page_f})
+    else:
+        page_f = HereticPage.objects.get(page_num=page)
+        pageurl = 'portfolio/HereticLibrary/'+page+'.html'
+        return render(request, pageurl, {'page': page_f})

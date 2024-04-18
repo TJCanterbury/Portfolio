@@ -19,3 +19,6 @@ admin.site.register(Publications)
 
 from .models import Images
 admin.site.register(Images)
+
+from .models import HereticPage
+admin.site.register(HereticPage)

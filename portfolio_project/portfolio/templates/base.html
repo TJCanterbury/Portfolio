@@ -38,8 +38,8 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" style="overflow:visible">
-          <a href="{% url 'illustrations' %}" class="{% if request.path == '/illustrations/' %}active{% endif %}">Illustrations</a>
           <a href="{% url 'heretics' %}" class="{% if request.path == '/heretics/' %}active{% endif %}">Heretics of Xathia</a>
+          <a href="{% url 'illustrations' %}" class="{% if request.path == '/illustrations/' %}active{% endif %}">Illustrations</a>
           <a href="{% url 'sketches' %}" class="{% if request.path == '/sketches/' %}active{% endif %}">Sketches </a>
         </div>
       </div>

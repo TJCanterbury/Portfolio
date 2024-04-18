@@ -10,7 +10,8 @@ urlpatterns = [
     path('publications/',views.publications, name='publications'),
     path('projects/',views.projects, name='projects'),
     path('opinions/',views.opinions, name='opinions'),
-    path('heretics/',views.heretics, name='heretics'),
     path('sketches/',views.sketches, name='sketches'),
-    path('contact/',views.contact, name='contact')
+    path('contact/',views.contact, name='contact'),
+    path('heretics/',views.heretics, name='heretics'),
+    path('heretics/<str:page>/',views.heretics, name='heretics page'),
 ]

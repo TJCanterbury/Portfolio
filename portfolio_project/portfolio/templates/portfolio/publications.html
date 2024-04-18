@@ -1,24 +1,23 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Science - Publications{% endblock %}
 
 {% block content %}
 <body>
-    
+
     <div style="text-align: center;">
-    <div>
         <h1 style="font-family: 'Courier New'; color: orange; text-align: center;">Preprints</h2>
         {% for article in articles %}
         <ul style="padding-left: 100px; padding-right: 100px;">
             <div style="text-align: justified;">
-                <li>{{ article.authors }}. 
-                ({{ article.year }}). 
+                <li>{{ article.authors }}.
+                ({{ article.year }}).
                 <i>{{ article.title }}</i></li>
 
             </div>
         </ul>
         {% endfor %}
-    </div>
+        <img src="{% static 'Images/Jackdaw.png' %}" alt="DivorceModel"  style="max-width: 100%;">
     </div>
 </body>
 {% endblock %}

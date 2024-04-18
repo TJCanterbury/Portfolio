@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Heretics of Xathia{% endblock %}
+
+{% block content %}
+<body>
+    <h1 style="text-align:center;">Heretics of Xathia</h1>
+    <img src="{{ page.image.url }}" alt="{{ page.name }}" style="width:100%; height: auto;">
+    <div style="text-align:center;color:white;">
+        <a href="https://www.tjcanterbury.uk/heretics/0" style="color:white;"> << First </a>
+        <a href="https://www.tjcanterbury.uk/heretics/2" style="color:white;">  < Previous </a>
+        <a href="https://www.tjcanterbury.uk/heretics/3" style="color:white;"> Next >  </a>
+        <a  href="https://www.tjcanterbury.uk/heretics/3" style="color:white;"> Latest >> </a>
+    </div>
+</body>
+{% endblock %}
